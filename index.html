@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo.css">
+    <title>Gerador de Senha</title>
+</head>
+
+<body>
+    <div class="container">
+        <!--Input deslizante para selecionar o comprimento -->
+        <h2>Gerar Senha</h2>
+        <div class="slider_man">
+            <input type="range" value="8" min="1" max="25" class="slider"
+                oninput="this.nextElementSibling.value = this.value" id="slider">
+            <output>8</output>
+        </div>
+        <!--Botão para gerar Senha-->
+        <button id="gerador" class="action-btn">
+            Gerador <i class="fab fa-keycdn"></i>
+        </button>
+        <label>Incluir caractere especial
+            <input type="checkbox" checked="checked" id="checkbox">
+            <span class="checkmark"></span>
+        </label>
+
+        <div class="output">
+            <h3 id="pwd_txt"><span>Clique em Gerar</span></h3>
+            <button id="clipboard" class="clipboard">
+                <i class="fas fa-clipboard"></i>
+            </button>
+            <h4>Copiar Senha</h4>
+        </div>
+        <span id="copy_text"></span>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/4ad8e2c939.js" crossorigin="anonymous"></script>
+<script src="./logica.js"></script>
+
+</html>
